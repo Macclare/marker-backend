@@ -1,18 +1,18 @@
 import express from "express";
 import logger from "morgan";
 import cookieParser from "cookie-parser"
-import {db} from './config'
+import { db } from './src/config'
 import cors from "cors";
-import {URL, port} from './config'
+import { URL, port } from './src/config'
 import dotenv from 'dotenv';
-import markerRoutes from "./routes/markerRoutes";
+import markerRoutes from "./src/routes/markerRoutes";
 dotenv.config();
 
 //Sequelize connection
-db.sync({alter:true}).then(() => {
+db.sync({ alter: true }).then(() => {
     console.log('DB connected successfully')
 }).catch((err: any) => {
- console.log(err)
+    console.log(err)
 })
 
 //const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname')
@@ -28,7 +28,7 @@ app.use(cors());
 //Router middleware
 app.use('/api/markers', markerRoutes);
 
-app.listen(port, ()=>{
+app.listen(port, () => {
     console.log(`Server running on ${URL}:${port}`)
 })
 

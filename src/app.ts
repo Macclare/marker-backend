@@ -1,11 +1,11 @@
 import express from "express";
 import logger from "morgan";
 import cookieParser from "cookie-parser"
-import { db } from './src/config'
+import { db } from './config'
 import cors from "cors";
-import { URL, port } from './src/config'
+import { URL, port } from './config'
 import dotenv from 'dotenv';
-import markerRoutes from "./src/routes/markerRoutes";
+import markerRoutes from "./routes/markerRoutes";
 dotenv.config();
 
 //Sequelize connection

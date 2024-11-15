@@ -1,6 +1,6 @@
 # Releaf-Backend
 
-This is a the FIRS Portal project built using React and TypeScript.
+This is a marker-api project built using Node, express and TypeScript.
 
 ## Thoughts
 

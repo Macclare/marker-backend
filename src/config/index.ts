@@ -23,4 +23,4 @@ export const db = new Sequelize(
 );
 
 export const URL = process.env.URL as string;
-export const port = process.env.PORT || 4000;
+

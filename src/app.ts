@@ -3,7 +3,7 @@ import logger from "morgan";
 import cookieParser from "cookie-parser"
 import { db } from './config'
 import cors from "cors";
-import { URL, port } from './config'
+import { URL } from './config'
 import dotenv from 'dotenv';
 import markerRoutes from "./routes/markerRoutes";
 dotenv.config();
@@ -15,6 +15,7 @@ db.sync({ alter: true }).then(() => {
     console.log(err)
 })
 
+export const port = process.env.PORT || 4000;
 //const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname')
 
 const app = express();
